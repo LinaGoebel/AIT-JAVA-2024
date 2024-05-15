@@ -1,10 +1,11 @@
 package consultation;
 
-public class Animal {
+public abstract class Animal {
 
   String kind;
   String name;
 
+  abstract void makeSound();
 }
 
 class Cat extends Animal {
@@ -14,6 +15,11 @@ class Cat extends Animal {
     this.name = name;
     kind = "cat";
   }
+
+  @Override
+  void makeSound() {
+
+  }
 }
 
 class Dog extends Animal {
@@ -22,5 +28,10 @@ class Dog extends Animal {
   public Dog(String name) {
     this.name = name;
     kind = "dog";
+  }
+
+  @Override
+  void makeSound() {
+
   }
 }

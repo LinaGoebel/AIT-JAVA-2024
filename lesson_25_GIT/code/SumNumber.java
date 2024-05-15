@@ -12,3 +12,4 @@ public class SumNumber {
     System.out.println(sum);
   }
 }
+ 

@@ -61,4 +61,3 @@ class LibraryImplTest {
     System.out.println("quantity book = " + library.quantity());
   }
 
-}

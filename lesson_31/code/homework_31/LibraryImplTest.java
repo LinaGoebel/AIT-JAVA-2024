@@ -60,4 +60,5 @@ class LibraryImplTest {
     assertEquals(5, library.quantity());
     System.out.println("quantity book = " + library.quantity());
   }
+}
 

@@ -117,4 +117,15 @@ public class CompanyImpl implements Company {
 
     return res;
   }
+
+  @Override
+  public Employee updateEmployee(int id, String secondName) {
+    for (int i = 0; i < size; i++) {
+      if (employees[i].getId() == id) {
+        employees[i].setSecondName(secondName);
+        return employees[i];
+      }
+    }
+    return null;
+  }
 }

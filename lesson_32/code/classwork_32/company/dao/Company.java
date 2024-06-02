@@ -16,4 +16,5 @@ public interface  Company {
 
   Employee[] findEmployeeHoursGreaterThen(int hours);
   Employee[] findEmployeeSalaryRange(double min, double max);
+  Employee updateEmployee(int id,String secondName);
 }

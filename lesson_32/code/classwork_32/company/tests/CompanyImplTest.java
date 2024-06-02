@@ -99,4 +99,16 @@ class CompanyImplTest {
     Employee[] expected = {e[0], e[2]};
     assertArrayEquals(expected, actual);
   }
+  @Test
+  void updateEmployee(){
+    Employee employee = new Manager(101, "John", "Smith", 45, 168, 5000, 5);
+    System.out.println("Before update: " + employee);
+    employee.setSecondName("Petrov");
+    company.updateEmployee(101, employee.getSecondName());
+    employee = company.findEmployee(101);
+    assertEquals("Petrov", employee.getSecondName());
+    System.out.println("After update: " + employee);
+
+    assertEquals(employee, company.findEmployee(101));
+  }
 }

@@ -1,7 +1,5 @@
 package homework_product;
 
-import homework_32.Computer;
-
 public interface Supermarket {
 
   boolean addProduct(Product product);

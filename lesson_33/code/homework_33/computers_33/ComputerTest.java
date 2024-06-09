@@ -1,9 +1,5 @@
 package homework_33.computers_33;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import homework_32.Laptop;
-import homework_32.Smartphone;
 import java.util.Arrays;
 import java.util.Comparator;
 import org.junit.jupiter.api.BeforeEach;

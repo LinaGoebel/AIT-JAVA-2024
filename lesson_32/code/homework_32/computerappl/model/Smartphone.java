@@ -1,4 +1,6 @@
-package homework_32;
+package homework_32.computerappl.model;
+
+import homework_32.computerappl.dao.Computer;
 
 public class Smartphone extends Computer {
 

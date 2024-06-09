@@ -1,7 +1,12 @@
-package homework_32;
+package homework_32.computerappl.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import homework_32.computerappl.dao.Computer;
+import homework_32.computerappl.dao.Shop;
+import homework_32.computerappl.dao.ShopImpl;
+import homework_32.computerappl.model.Laptop;
+import homework_32.computerappl.model.Smartphone;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

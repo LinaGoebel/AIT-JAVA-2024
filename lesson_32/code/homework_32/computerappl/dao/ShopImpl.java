@@ -1,9 +1,6 @@
-package homework_32;
+package homework_32.computerappl.dao;
 
-import homework_31.Book_31;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ShopImpl implements Shop {
 

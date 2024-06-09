@@ -1,4 +1,4 @@
-package homework_34;
+package homework_34.todoappl.model;
 
 public enum Menu {
   ADD_TASK(1, "Add a task"),
@@ -27,8 +27,11 @@ public enum Menu {
   public static void printMenu() {
 
     Menu[] menu = Menu.values();
-    for (int i = 0; i < menu.length; i++) {
-      System.out.println(menu[i].getNumber() + " - " + menu[i].getAction());
+   //for (int i = 0; i < menu.length; i++) {
+   //  System.out.println(menu[i].getNumber() + " - " + menu[i].getAction());
+    for (Menu m : menu) {   //fori replace with foreach
+      System.out.println(m.getNumber() + " - " + m.getAction());
     }
+    System.out.println();
   }
 }

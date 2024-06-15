@@ -130,10 +130,13 @@ public abstract class Person implements Comparable<Person> {
     if (this == o) {
       return true;
     }
-    if (!(o instanceof Person person)) {
+    if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return id == person.id && Objects.equals(lastName, person.lastName);
+
+    Person person = (Person) o;
+    return id == person.id && Objects.equals(firstName, person.firstName) &&
+        Objects.equals(lastName, person.lastName) && Objects.equals(email, person.email);
   }
 
   @Override

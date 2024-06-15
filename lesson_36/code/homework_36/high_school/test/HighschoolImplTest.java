@@ -8,6 +8,7 @@ import homework_36.high_school.academic_community.model.Professor;
 import homework_36.high_school.academic_community.model.Student;
 import homework_36.high_school.dao.HighschoolImpl;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -35,7 +36,7 @@ class HighschoolImplTest {
             "9876543210", "Aspirant", 20.99, LocalDate.of(2021, 9, 1),
             5, "Physics", 4.8),
         new Professor(891, "David", "Brown", 40, "Male", "david.brown@example.com",
-            "5556667777", "Professor", 70.49, LocalDate.of(20001, 4, 25),
+            "5556667777", "Professor", 70.49, LocalDate.of(2001, 4, 25),
             "Associate Professor", 10, "Computer Science", "Artificial Intelligence"),
         new Professor(756, "Carol", "Williams", 35, "Female", "carol.williams@example.com",
             "5556667777", "Professor", 70.79, LocalDate.of(2008, 8, 28),
@@ -137,7 +138,21 @@ class HighschoolImplTest {
   void findPersonByHighSalary() {
     System.out.println("=============Persons with salary > 20==============");
     List<Person> persons = highschool.findPersonByHighSalary(20);
-    assertEquals(4, persons.size());
+    Person[] expected = { new Aspirant(489, "Jane", "Smith", 25, "Female", "jane.smith@example.com",
+        "9876543210", "Aspirant", 20.99, LocalDate.of(2021, 9, 1),
+        4, "Machine Learning", 4.5),
+        new Aspirant(365, "Bob", "Smith", 28, "Male", "bob.smith@example.com",
+            "9876543210", "Aspirant", 20.99, LocalDate.of(2021, 9, 1),
+            5, "Physics", 4.8),
+        new Professor(891, "David", "Brown", 40, "Male", "david.brown@example.com",
+            "5556667777", "Professor", 70.49, LocalDate.of(2001, 4, 25),
+            "Associate Professor", 10, "Computer Science", "Artificial Intelligence"),
+        new Professor(756, "Carol", "Williams", 35, "Female", "carol.williams@example.com",
+            "5556667777", "Professor", 70.79, LocalDate.of(2008, 8, 28),
+            "Professor", 12, "Chemistry", "Organic Chemistry")
+
+    };
+    assertArrayEquals(expected, persons.toArray());
     for (Person person : persons) {
       System.out.println(person);
     }
@@ -147,7 +162,7 @@ class HighschoolImplTest {
   void findPersonByStartDate() {
     System.out.println("=============Persons with start date > 2020==============");
     List<Person> persons = highschool.findPersonByStartDate(LocalDate.of(2020, 1, 1));
-    assertEquals(5, persons.size());
+   assertArrayEquals(persons.toArray(), highschool.findPersonByStartDate(LocalDate.of(2020, 1, 1)).toArray());
     for (Person person : persons) {
       System.out.println(person);
     }

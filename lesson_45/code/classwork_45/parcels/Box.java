@@ -7,13 +7,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Box implements Iterable<Parcel> {
-
+//field
   List<Parcel> parcels; // список посылок в коробке (опись)
-
+//constructor create Box
   public Box(int numParcels) {
     Random random = new Random();
     this.parcels = Stream.generate(
-            () -> new Parcel(random.nextDouble(0, 2))) // вес посылки от 0 до 2 кг
+            () -> new Parcel(random.nextDouble(0, 2) + 1.5)) // вес посылки от 0 до 2 кг
         .limit(numParcels)
         .collect(Collectors.toList());
   }
